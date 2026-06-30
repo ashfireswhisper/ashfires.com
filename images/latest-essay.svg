@@ -1,0 +1,21 @@
+<svg width="700" height="980" viewBox="0 0 700 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="700" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CFC1B2"/>
+      <stop offset="0.52" stop-color="#989187"/>
+      <stop offset="1" stop-color="#5A544E"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="560" x2="700" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6A6159"/>
+      <stop offset="1" stop-color="#27221F"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="980" fill="url(#sky)"/>
+  <path d="M0 640C100 592 182 545 260 515C347 480 433 479 516 520C590 556 642 563 700 547V980H0V640Z" fill="url(#mountain)"/>
+  <path d="M0 708C122 666 205 620 285 592C368 563 448 569 536 607C603 636 652 641 700 631V980H0V708Z" fill="#403833" opacity="0.95"/>
+  <circle cx="330" cy="570" r="9" fill="#231D19"/>
+  <path d="M330 580V629" stroke="#231D19" stroke-width="4" stroke-linecap="round"/>
+  <path d="M330 607L310 598M330 607L348 595" stroke="#231D19" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 884H700" stroke="#1F1A17" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="350" y="912" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" letter-spacing="5" fill="#EFE8DE">ESSAY</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg width="1800" height="1200" viewBox="0 0 1800 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1800" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7D8C8"/>
+      <stop offset="0.45" stop-color="#C5AD93"/>
+      <stop offset="1" stop-color="#826149"/>
+    </linearGradient>
+    <linearGradient id="poster" x1="1220" y1="150" x2="1220" y2="890" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#191311"/>
+      <stop offset="1" stop-color="#080606"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1230 405) rotate(90) scale(250 190)">
+      <stop stop-color="#DEC08A" stop-opacity="1"/>
+      <stop offset="1" stop-color="#DEC08A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#bg)"/>
+  <rect x="0" y="0" width="850" height="1200" fill="#EBDCCB" opacity="0.72"/>
+  <rect x="850" y="0" width="32" height="1200" fill="#B79A80" opacity="0.55"/>
+  <rect x="882" y="0" width="230" height="1200" fill="#A68970" opacity="0.14"/>
+  <rect x="1112" y="70" width="550" height="1130" fill="#B9987B" opacity="0.6"/>
+  <rect x="1200" y="220" width="220" height="600" fill="url(#poster)" rx="3"/>
+  <ellipse cx="1230" cy="395" rx="170" ry="205" fill="url(#glow)"/>
+  <path d="M1230 305C1187 327 1165 380 1175 430C1186 486 1232 511 1269 533C1310 557 1340 599 1344 646C1348 696 1321 742 1283 776C1257 800 1232 822 1212 853"
+        stroke="#E4C381" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1218 332C1194 354 1184 395 1192 430M1241 332C1261 356 1270 390 1267 427M1188 436C1164 447 1148 472 1141 503M1297 459C1322 478 1338 505 1344 540M1182 558C1155 573 1138 602 1128 633M1312 575C1339 590 1357 618 1364 652M1181 681C1166 709 1162 746 1171 781M1312 701C1334 721 1347 747 1350 778"
+        stroke="#E4C381" stroke-width="1.5" stroke-linecap="round" opacity="0.9"/>
+  <rect x="0" y="900" width="1800" height="300" fill="#7A5D48" opacity="0.46"/>
+  <rect x="240" y="820" width="320" height="180" fill="#B79F8B" opacity="0.96"/>
+  <rect x="240" y="992" width="320" height="18" fill="#6A4E3C" opacity="0.85"/>
+  <path d="M0 820H1800" stroke="#5B4436" stroke-opacity="0.38" stroke-width="3"/>
+  <path d="M1245 840V770" stroke="#8F6B53" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1245 770C1228 742 1209 724 1184 710" stroke="#8F6B53" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M1245 770C1262 742 1281 724 1308 710" stroke="#8F6B53" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="1180" cy="706" r="5" fill="#D7B883"/>
+  <circle cx="1212" cy="694" r="4" fill="#D7B883"/>
+  <circle cx="1296" cy="696" r="4" fill="#D7B883"/>
+  <circle cx="1320" cy="710" r="5" fill="#D7B883"/>
+  <text x="1230" y="835" text-anchor="middle" font-family="Georgia, serif" font-size="26" letter-spacing="9" fill="#DCC6A1">ASHFIRES</text>
+</svg>

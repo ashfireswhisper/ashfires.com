@@ -1,0 +1,23 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4C6B8"/>
+      <stop offset="0.52" stop-color="#A69A8F"/>
+      <stop offset="1" stop-color="#71685F"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="0" y1="520" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F645A"/>
+      <stop offset="1" stop-color="#2E2A26"/>
+    </linearGradient>
+    <radialGradient id="mist" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(790 360) rotate(90) scale(220 350)">
+      <stop stop-color="#F2E8DE" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#F2E8DE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <path d="M0 620C200 570 330 490 460 420C620 335 760 300 930 340C1110 383 1240 330 1600 220V900H0V620Z" fill="url(#ridge)"/>
+  <path d="M0 690C170 645 315 610 465 556C630 497 775 476 905 512C1033 546 1165 520 1600 405V900H0V690Z" fill="#433C37" opacity="0.9"/>
+  <ellipse cx="790" cy="360" rx="360" ry="215" fill="url(#mist)"/>
+  <text x="800" y="735" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="50" letter-spacing="0.03em" fill="#F2E8DC">Stay Connected</text>
+  <text x="800" y="788" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" fill="#F2E8DC">Books, essays, research, and music.</text>
+</svg>

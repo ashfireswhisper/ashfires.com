@@ -1,0 +1,24 @@
+<svg width="700" height="980" viewBox="0 0 700 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="700" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1118"/>
+      <stop offset="0.6" stop-color="#10151B"/>
+      <stop offset="1" stop-color="#20262C"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(350 610) rotate(90) scale(175 145)">
+      <stop stop-color="#FFD88D" stop-opacity="1"/>
+      <stop offset="0.42" stop-color="#E5BA66" stop-opacity="0.84"/>
+      <stop offset="1" stop-color="#E5BA66" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="700" height="980" fill="url(#bg)"/>
+  <path d="M70 800C162 664 251 587 348 565C438 545 530 557 630 608V980H0V858C22 835 43 819 70 800Z" fill="#0D1218" opacity="0.75"/>
+  <path d="M350 362L375 500H325L350 362Z" fill="#B89F77"/>
+  <path d="M314 510H386L402 573H298L314 510Z" fill="#6E5A43"/>
+  <path d="M350 360C357 322 372 298 394 278" stroke="#B89F77" stroke-width="5" stroke-linecap="round"/>
+  <path d="M350 360C343 322 328 298 306 278" stroke="#B89F77" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="350" cy="610" rx="158" ry="110" fill="url(#lamp)"/>
+  <path d="M350 636C357 642 363 656 363 672C363 692 348 708 328 708C308 708 292 692 292 672C292 656 298 642 305 636C313 629 318 625 326 618C333 611 337 600 337 586H363C363 600 367 611 375 618C383 625 388 629 396 636Z" fill="#0B0B0B"/>
+  <path d="M0 884H700" stroke="#2A2F34" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="350" y="912" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" letter-spacing="5" fill="#F3D59A">MUSIC</text>
+</svg>

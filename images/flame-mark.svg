@@ -1,0 +1,25 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softShadow" x="0" y="0" width="120" height="120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#5B3C57" flood-opacity="0.22"/>
+    </filter>
+    <linearGradient id="leftFlame" x1="38" y1="84" x2="60" y2="16" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5F4B8B"/>
+      <stop offset="1" stop-color="#7A68A8"/>
+    </linearGradient>
+    <linearGradient id="centerFlame" x1="54" y1="90" x2="74" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E59AA0"/>
+      <stop offset="1" stop-color="#D56D77"/>
+    </linearGradient>
+    <linearGradient id="rightFlame" x1="68" y1="86" x2="88" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9A5A73"/>
+      <stop offset="1" stop-color="#B46A86"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#softShadow)">
+    <path d="M57 18C47 30 41 42 39 54C37 66 40 77 48 86C41 77 38 68 38 59C38 45 45 31 57 18Z" fill="url(#leftFlame)"/>
+    <path d="M63 18C72 29 79 39 82 50C85 61 83 70 77 79C79 70 78 62 74 54C70 46 67 38 63 18Z" fill="url(#centerFlame)"/>
+    <path d="M74 28C80 38 84 47 86 56C88 65 87 73 83 80C86 71 86 64 84 58C81 50 77 41 74 28Z" fill="url(#rightFlame)"/>
+    <path d="M60 28C63 37 66 44 70 50C64 48 58 49 53 53C54 45 56 36 60 28Z" fill="#F3D7D3" opacity="0.75"/>
+  </g>
+</svg>

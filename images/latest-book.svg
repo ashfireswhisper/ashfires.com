@@ -1,0 +1,29 @@
+<svg width="700" height="980" viewBox="0 0 700 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="700" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C7A18C"/>
+      <stop offset="0.5" stop-color="#8F7C71"/>
+      <stop offset="1" stop-color="#5B4336"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="620" x2="700" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F5D4C"/>
+      <stop offset="1" stop-color="#261D17"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="980" fill="url(#sky)"/>
+  <path d="M0 670C130 604 234 566 348 566C450 566 527 593 700 690V980H0V670Z" fill="url(#ground)"/>
+  <rect x="170" y="610" width="360" height="170" fill="#B4987E" opacity="0.92"/>
+  <rect x="170" y="777" width="360" height="15" fill="#5D4739"/>
+  <ellipse cx="350" cy="612" rx="100" ry="12" fill="#1B140E" opacity="0.25"/>
+  <path d="M347 587V556" stroke="#96755E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M347 556C330 529 310 512 285 500" stroke="#96755E" stroke-width="2.3" stroke-linecap="round"/>
+  <path d="M347 556C365 529 385 512 415 500" stroke="#96755E" stroke-width="2.3" stroke-linecap="round"/>
+  <circle cx="282" cy="498" r="5" fill="#E0C187"/>
+  <circle cx="295" cy="484" r="4" fill="#E0C187"/>
+  <circle cx="385" cy="487" r="4" fill="#E0C187"/>
+  <circle cx="417" cy="503" r="5" fill="#E0C187"/>
+  <path d="M0 810H700" stroke="#201813" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="350" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="54" fill="#F5EADF">Just Sit</text>
+  <text x="350" y="205" text-anchor="middle" font-family="Georgia, serif" font-size="54" fill="#F5EADF">With Me</text>
+  <text x="350" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" letter-spacing="4" fill="#E8CC93">WHEN UNDERSTANDING IS MISUNDERSTOOD</text>
+</svg>
