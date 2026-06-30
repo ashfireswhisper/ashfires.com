@@ -608,6 +608,15 @@ h3 {
 
   .latest-card {
     grid-template-columns: 1fr;
+    grid-template-rows: 150px auto;
+  }
+
+  .latest-card img {
+    height: 150px;
+  }
+
+  .latest-copy {
+    padding: 0.95rem 1rem 1rem;
   }
 
   .newsletter-form {
