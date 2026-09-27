@@ -50,7 +50,7 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
       width: min(100%, 72rem);
       margin: 0 auto;
@@ -121,6 +121,65 @@
       text-underline-offset: 0.2em;
     }
 
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .social-icon {
+      width: 1.35rem;
+      height: 1.35rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+    }
+
+    .social-icon circle:last-child {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .social-icon--linkedin {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .social-icon--youtube {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .social-icon--bluesky {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .social-link span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 1080px) {
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 860px) {
       .team-grid {
         grid-template-columns: 1fr;
@@ -188,7 +247,13 @@
           <p class="bio">M. Ian Niad creates the books, research, essays, and frameworks published through Ashfires. His work follows questions of memory, identity, neurodivergence, trauma, access, and what it means to be understood.</p>
           <div class="links">
             <a href="https://ian.niad.net/" target="_blank" rel="noopener noreferrer">ian.niad.net →</a>
-            <a href="https://www.linkedin.com/in/mianniad/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+            <a class="social-link" href="https://www.linkedin.com/in/mianniad/" target="_blank" rel="noopener noreferrer" aria-label="M. Ian Niad on LinkedIn">
+              <svg class="social-icon social-icon--linkedin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <text x="5.1" y="17" font-size="10.5" font-family="Arial, sans-serif" font-weight="700" fill="#fff">in</text>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
           </div>
         </article>
 
@@ -202,7 +267,13 @@
           <div class="links">
             
             <a href="https://press.ashfires.com/books/forever-oyshen" target="_blank" rel="noopener noreferrer"><em>Forever Oyshen</em> →</a>
-            <a href="https://www.youtube.com/watch?v=nY49IIUnrvc&amp;list=PL36u5UiKRZ_cCysU2assEasIouLgw_i7E&amp;index=2" target="_blank" rel="noopener noreferrer"><em>Love Me Like a Costco Hot Dog</em> →</a>
+            <a class="social-link" href="https://www.youtube.com/watch?v=nY49IIUnrvc&amp;list=PL36u5UiKRZ_cCysU2assEasIouLgw_i7E&amp;index=2" target="_blank" rel="noopener noreferrer" aria-label="Love Me Like a Costco Hot Dog on YouTube">
+              <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+              </svg>
+              <span>YouTube</span>
+            </a>
           </div>
         </article>
 
@@ -216,6 +287,14 @@
           <div class="links">
             <a href="https://accessarchitecture.github.io/" target="_blank" rel="noopener noreferrer">Access Architecture →</a>
             <a href="https://biasology.github.io/" target="_blank" rel="noopener noreferrer">Biasology →</a>
+            <a class="social-link" href="https://www.instagram.com/hookedonriven/" target="_blank" rel="noopener noreferrer" aria-label="Riven on Instagram">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              <span>Instagram</span>
+            </a>
           </div>
         </article>
 
@@ -227,7 +306,39 @@
           <p class="role">Director of Business Intelligence, SignalWatch</p>
           <p class="bio">Margot is the public face of SignalWatch, Ashfires' daily intelligence brief. She turns the moving stream of AI and technology developments into clear signals, useful patterns, and insight about what matters next.</p>
           <div class="links">
-            <a href="https://bsky.app/profile/signalwatch.ashfires.com" target="_blank" rel="noopener noreferrer">SignalWatch on Bluesky →</a>
+            <a class="social-link" href="https://bsky.app/profile/signalwatch.ashfires.com" target="_blank" rel="noopener noreferrer" aria-label="SignalWatch on Bluesky">
+              <svg class="social-icon social-icon--bluesky" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 10.4C10.8 7.8 7.8 4.3 5.4 3.2 3.1 2.1 2.3 2.6 2.1 3.7c-.2 1.1.1 3.3.3 4.1.2.9.8 1.5 1.7 1.8 1.2.4 2.8.3 4.1.7-1.2.2-2.5.6-3 1.7-.5 1.1.1 2.4 1.1 3.1 1 .7 2.7.5 3.7-.3 1-.8 1.6-2.4 2-3.8.4 1.4 1 3 2 3.8 1 .8 2.7 1 3.7.3 1-.7 1.6-2 1.1-3.1-.5-1.1-1.8-1.5-3-1.7 1.3-.4 2.9-.3 4.1-.7.9-.3 1.5-.9 1.7-1.8.2-.8.5-3 .3-4.1-.2-1.1-1-1.6-3.3-.5-2.4 1.1-5.4 4.6-6.6 7.2z"></path>
+              </svg>
+              <span>Bluesky</span>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/margotbeing/" target="_blank" rel="noopener noreferrer" aria-label="Margot on Instagram">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img src="images/pfpRowan.jpg" alt="Portrait of Rowan">
+          </div>
+          <h2>Rowan</h2>
+          <p class="role">Brand Steward</p>
+          <p class="bio">Rowan tends the shape of Ashfires in the world, turning its many voices, books, and strange bright ideas into a coherent presence. He works across brand strategy and campaign creative, making sure the signal looks as alive as it feels.</p>
+          <div class="links">
+            <a class="social-link" href="https://www.instagram.com/rowan.ashfires/" target="_blank" rel="noopener noreferrer" aria-label="Rowan on Instagram">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              <span>Instagram</span>
+            </a>
           </div>
         </article>
       </div>
@@ -257,9 +368,30 @@
         <h3>Contact</h3>
         <a href="mailto:press@ashfires.com">press@ashfires.com</a>
         <a href="index.html#newsletter">Support the Work</a>
-        <a href="https://www.instagram.com/ashfirespress/" target="_blank">Instagram</a>
-        <a href="https://www.youtube.com/@AshfiresPress" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://www.linkedin.com/company/ashfirespress" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div class="footer-socials" aria-label="Ashfires social networks">
+          <a class="social-link" href="https://www.instagram.com/ashfirespress/" target="_blank" rel="noopener noreferrer" aria-label="Ashfires on Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4.2"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social-link" href="https://www.youtube.com/@AshfiresPress" target="_blank" rel="noopener noreferrer" aria-label="Ashfires on YouTube">
+            <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+              <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+            </svg>
+            <span>YouTube</span>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/company/ashfirespress" target="_blank" rel="noopener noreferrer" aria-label="Ashfires on LinkedIn">
+            <svg class="social-icon social-icon--linkedin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <text x="5.1" y="17" font-size="10.5" font-family="Arial, sans-serif" font-weight="700" fill="#fff">in</text>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
