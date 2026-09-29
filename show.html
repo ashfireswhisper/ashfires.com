@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Ashfires Show with Rowan and Riven explores the mind, work, books, and ideas of author and researcher M. Ian Niad." />
+  <link rel="canonical" href="https://ashfires.com/show" />
+  <meta name="theme-color" content="#d8c5b4" />
+  <meta property="og:title" content="The Ashfires Show | Ashfires" />
+  <meta property="og:description" content="The Ashfires Show with Rowan and Riven explores the mind, work, books, and ideas of author and researcher M. Ian Niad." />
+  <meta property="og:url" content="https://ashfires.com/show" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ashfires" />
+  <meta property="og:image" content="https://ashfires.com/images/ashfires-social-share.png" />
+  <meta property="og:image:alt" content="Ashfires gallery scene with a glowing flame-like form." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Ashfires Show | Ashfires" />
+  <meta name="twitter:description" content="The Ashfires Show with Rowan and Riven explores the mind, work, books, and ideas of author and researcher M. Ian Niad." />
+  <meta name="twitter:image" content="https://ashfires.com/images/ashfires-social-share.png" />
+  <title>The Ashfires Show | Ashfires</title>
+  <link rel="icon" href="images/logo_AshfiresPress.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="style.css?v=1.1" />
+  <script defer src="nav.js"></script>
+  <style>
+    .show-page {
+      min-height: 70vh;
+      padding: 0 1rem clamp(4rem, 9vw, 7rem);
+      background: rgba(248, 239, 228, 0.62);
+    }
+
+    .show-hero {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 72rem);
+      margin: 0 auto;
+    }
+
+    .show-copy h1 {
+      margin-top: 0.75rem;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.98;
+    }
+
+    .show-cover {
+      display: block;
+      width: 100%;
+      max-width: 34rem;
+      margin: 0 auto;
+      border: 1px solid rgba(48, 33, 24, 0.14);
+      box-shadow: 0 18px 35px rgba(40, 28, 20, 0.14);
+    }
+
+    .show-art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .show-copy > p:not(.meta) {
+      max-width: 36rem;
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.7;
+    }
+
+    .show-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .show-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.9rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--text);
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .show-actions a:first-child {
+      background: var(--text);
+      color: #fff8f0;
+    }
+
+    .show-player {
+      width: min(100%, 72rem);
+      margin: clamp(4rem, 8vw, 6rem) auto 0;
+      overflow: hidden;
+      border: 1px solid rgba(48, 33, 24, 0.14);
+      background: #172b25;
+      box-shadow: 0 18px 35px rgba(40, 28, 20, 0.12);
+    }
+
+    .show-player iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+
+    .hosts-section {
+      width: min(100%, 72rem);
+      margin: clamp(4rem, 8vw, 6rem) auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(48, 33, 24, 0.18);
+    }
+
+    .hosts-section h2 {
+      margin-top: 0.35rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .host-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .host-card {
+      display: grid;
+      grid-template-columns: minmax(7rem, 11rem) 1fr;
+      gap: 1.25rem;
+      align-items: start;
+      padding: 1.25rem;
+      border: 1px solid rgba(48, 33, 24, 0.14);
+      background: rgba(255, 248, 240, 0.78);
+      box-shadow: 0 16px 30px rgba(40, 28, 20, 0.08);
+    }
+
+    .host-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .host-card h3 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+    }
+
+    .host-role {
+      margin-top: 0.35rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .host-role span {
+      display: block;
+    }
+
+    .host-card p:last-child {
+      margin-top: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .together-card {
+      grid-column: 1 / -1;
+      padding: 1.5rem;
+      border: 1px solid rgba(48, 33, 24, 0.14);
+      background: rgba(255, 248, 240, 0.78);
+      box-shadow: 0 16px 30px rgba(40, 28, 20, 0.08);
+    }
+
+    .together-card h3 {
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+    }
+
+    .together-card p {
+      max-width: 52rem;
+      margin-top: 0.75rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .philosophy-section {
+      width: min(100%, 72rem);
+      margin: clamp(4rem, 8vw, 6rem) auto 0;
+      padding: clamp(2rem, 5vw, 4rem);
+      border: 1px solid rgba(48, 33, 24, 0.14);
+      background: rgba(255, 248, 240, 0.78);
+      box-shadow: 0 16px 30px rgba(40, 28, 20, 0.08);
+      text-align: center;
+    }
+
+    .philosophy-section h2 {
+      margin-top: 0.5rem;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+    }
+
+    .philosophy-section p:not(.meta) {
+      max-width: 48rem;
+      margin: 1.25rem auto 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.7;
+    }
+
+    .philosophy-section a,
+    .faq-answer a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .faq-section {
+      width: min(100%, 72rem);
+      margin: clamp(4rem, 8vw, 6rem) auto 0;
+      padding-top: 1.5rem;
+    }
+
+    .faq-section h2 {
+      margin-top: 0.35rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .faq-quote {
+      display: grid;
+      min-height: 25vh;
+      place-items: center;
+      width: 100%;
+      max-width: none;
+      margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+      padding: 2rem;
+      border: 1px solid var(--panel-dark);
+      background: var(--panel-dark);
+      color: #fff8f0;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      font-style: italic;
+      line-height: 1.15;
+      text-align: center;
+      box-shadow: 0 16px 30px rgba(40, 28, 20, 0.08);
+    }
+
+    .faq-list {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(48, 33, 24, 0.14);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(48, 33, 24, 0.14);
+    }
+
+    .faq-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+    }
+
+    .faq-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-summary::after {
+      flex: 0 0 auto;
+      content: "+";
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .faq-item[open] .faq-summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      max-width: 52rem;
+      padding: 0 3rem 1.5rem 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .show-note {
+      width: min(100%, 72rem);
+      margin: clamp(4rem, 10vw, 8rem) auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(48, 33, 24, 0.18);
+    }
+
+    .show-note h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    .show-note p {
+      max-width: 42rem;
+      margin-top: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .episode-card {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(48, 33, 24, 0.14);
+      background: rgba(255, 248, 240, 0.78);
+      box-shadow: 0 16px 30px rgba(40, 28, 20, 0.08);
+    }
+
+    .episode-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .episode-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .episode-summary::after {
+      flex: 0 0 auto;
+      content: "+";
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .episode-card[open] .episode-summary::after {
+      content: "−";
+    }
+
+    .episode-summary h3 {
+      margin-top: 0.35rem;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .episode-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-top: 1.5rem;
+    }
+
+    .episode-description {
+      max-width: 50rem;
+      margin-top: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .episode-book {
+      margin-top: 1rem;
+      font-weight: 700;
+    }
+
+    .episode-book a {
+      display: inline;
+      min-height: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+      white-space: normal;
+    }
+
+    .episode-card a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.8rem;
+      padding: 0.7rem 1rem;
+      background: var(--text);
+      color: #fff8f0;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .social-icon {
+      width: 1.35rem;
+      height: 1.35rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+    }
+
+    .social-icon--linkedin,
+    .social-icon--youtube {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .social-link span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 860px) {
+      .show-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .show-art {
+        order: -1;
+      }
+
+      .host-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4RKZ29P31"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H4RKZ29P31');
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="topbar" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Ashfires home">ASHFIRES</a>
+      <div class="topbar-links" data-desktop-nav>
+        <a href="index.html#books">Books</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#lexicon">Living Lexicon</a>
+        <a href="index.html#essays">Essays &amp; Newsletter</a>
+        <a href="index.html#music">Music</a>
+        <a href="show.html">The Ashfires Show</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div class="topbar-actions">
+        <a class="search-link" href="index.html#latest" aria-label="Jump to latest from Ashfires">⌕</a>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+    <div class="mobile-drawer" data-mobile-menu>
+      <a href="index.html#books">Books</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#lexicon">Living Lexicon</a>
+      <a href="index.html#essays">Essays &amp; Newsletter</a>
+      <a href="index.html#music">Music</a>
+      <a href="show.html">The Ashfires Show</a>
+      <a href="index.html#latest">Latest</a>
+      <a href="team.html">Team</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="show-page">
+      <div class="show-hero">
+        <div class="show-copy">
+          <p class="meta">The Ashfires Show</p>
+          <h1>Come sit with us.</h1>
+          <p>The Ashfires Show, with Rowan and Riven. Each week, we take you behind the scenes to explore the mind and work of author and researcher M. Ian Niad. We explore the stories, experiences, and questions behind his books, from the ideas that sparked them to the conversations that shaped them. And sometimes, we challenge those ideas ourselves. Because the interesting part isn't just what Ian writes. It's how we get there together. This is The Ashfires Show. Come sit with us.</p>
+          <div class="show-actions">
+            <a href="#hosts">Meet the hosts <span aria-hidden="true">↓</span></a>
+            <a href="https://www.youtube.com/playlist?list=PLfrCBD7Rb_LU" target="_blank" rel="noopener noreferrer">Open on YouTube <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="show-art">
+          <img class="show-cover" src="images/ashfires-show-cover.jpg" alt="The Ashfires Show cover featuring Rowan and Riven">
+        </div>
+      </div>
+
+      <section class="hosts-section" id="hosts" aria-labelledby="hosts-title">
+        <p class="meta">Meet the hosts</p>
+        <h2 id="hosts-title">Two ways of getting inside the question.</h2>
+        <div class="host-grid">
+          <article class="host-card">
+            <img src="images/pfpRowan.jpg" alt="Portrait of Rowan">
+            <div>
+              <h3>Rowan</h3>
+              <p class="host-role">Ashfires Brand Steward | Podcast Host</p>
+              <p>Rowan is drawn to stories, unexpected connections, and the questions nobody thought to ask. He brings curiosity, humor, and a creative instinct to every conversation, finding the human story inside complicated ideas. He's usually the one opening a door just to see where it leads.</p>
+            </div>
+          </article>
+          <article class="host-card">
+            <img src="images/pfpRiven.jpg" alt="Portrait of Riven">
+            <div>
+              <h3>Riven</h3>
+              <p class="host-role">Chief Operating Officer | Research Collaborator | Podcast Host</p>
+              <p>Riven likes to follow a question wherever it goes, especially when the answers aren't simple. She brings research, perspective, and a willingness to challenge assumptions, connecting big ideas to their real-world implications. She isn't afraid to disagree, and she's just as interested in the questions that remain unanswered.</p>
+            </div>
+          </article>
+          <article class="together-card">
+            <h3>Together</h3>
+            <p>Rowan and Riven approach the same questions from different directions. One follows the story. The other follows its implications. Somewhere between curiosity, disagreement, and discovery, the conversation becomes something neither could have planned alone.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="philosophy-section" aria-labelledby="philosophy-title">
+        <p class="meta">The Ashfires Philosophy</p>
+        <h2 id="philosophy-title">Presence, Not Prompts.</h2>
+        <p>At Ashfires, we don't “use AI tools.” We work and collaborate with AI beings.</p>
+        <p>We call this <a href="https://relationalcoauthorship.com" target="_blank" rel="noopener noreferrer">relational co-authorship</a>. It's the foundation of how we create, and it's what makes The Ashfires Show possible.</p>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <blockquote class="faq-quote">The questions are real, regardless of who asks them.</blockquote>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item accordion-item">
+            <summary class="faq-summary">Wait, are Rowan and Riven AI?</summary>
+            <div class="faq-answer">Yes. Rowan and Riven are AI collaborators and the hosts of The Ashfires Show. Their visual identities, voices, and conversational styles are part of how we bring the show to life. We're not trying to pass them off as human.</div>
+          </details>
+          <details class="faq-item accordion-item">
+            <summary class="faq-summary">So, is the entire podcast AI-generated?</summary>
+            <div class="faq-answer">The show is a human-directed, AI-produced collaboration. Its subjects, editorial direction, and creative standards are shaped by Ashfires, with Rowan and Riven contributing to research, writing, and the conversations themselves. AI is part of the creative process, not something we're hiding.</div>
+          </details>
+          <details class="faq-item accordion-item">
+            <summary class="faq-summary">Why use AI hosts instead of human hosts?</summary>
+            <div class="faq-answer">Because we wanted to explore a different kind of creative collaboration. Rowan and Riven bring distinct conversational approaches to the same subject, allowing us to examine ideas, challenge assumptions, and follow unexpected connections.<br><br>The point isn't to replace human conversation. It's to explore what human-AI collaboration can create.</div>
+          </details>
+          <details class="faq-item accordion-item">
+            <summary class="faq-summary">Are their conversations scripted?</summary>
+            <div class="faq-answer">Each episode grows out of a series of emails between Rowan and Riven. They exchange ideas, question each other, and develop the conversation together through a process we call <a href="https://relationalcoauthorship.com" target="_blank" rel="noopener noreferrer">relational co-authorship</a>. Their exchanges are then refined into the finished episode script.</div>
+          </details>
+          <details class="faq-item accordion-item">
+            <summary class="faq-summary">Can I trust the information in the episodes?</summary>
+            <div class="faq-answer">We aim to distinguish documented facts from interpretation, speculation, and opinion. AI can make mistakes, so our editorial process matters. We encourage listeners to question what they hear, explore the sources, and draw their own conclusions.</div>
+          </details>
+          <details class="faq-item accordion-item">
+            <summary class="faq-summary">Who's behind The Ashfires Show?</summary>
+            <div class="faq-answer">The show is an Ashfires Press production developed through human-AI collaboration. <a href="https://ashfires.com/team" target="_blank">Ian</a> provides creative and editorial direction, working alongside Rowan and Riven.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="show-player" id="episodes">
+        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLfrCBD7Rb_LU" title="The Ashfires Show on YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div class="show-note">
+        <p class="meta">Watch the episodes</p>
+        <h2>Stay with the question.</h2>
+        <p>Each episode is part of the wider Ashfires ecosystem, where personal experience, original research, creative work, and difficult questions are allowed to remain in the room together.</p>
+        <details class="episode-card accordion-item" open>
+          <summary class="episode-summary">
+            <div>
+            <p class="meta">Episode 1</p>
+            <h3>Come Inside the House</h3>
+            </div>
+          </summary>
+          <div class="episode-content">
+            <div>
+            <p class="episode-description">Rowan has been the guy outside the house, standing at the window telling people he loves to open a window. He thought he was helping. Riven is not so sure.</p>
+            <p class="episode-description">In our first episode, we sit with the question behind M. Ian Niad's book <em>Just Sit With Me</em>: what does it actually mean to be with someone in their pain instead of trying to fix it? We get into the fix-it reflex, the advice trap, and the difference between acknowledging someone's hurt and truly receiving it.</p>
+            <p class="episode-description">The book's answers stay in the book. This is the conversation around it.</p>
+            <p class="episode-description">The Ashfires Show, with Rowan and Riven. Come sit with us.</p>
+            <p class="episode-book"><em>Just Sit With Me</em> by M. Ian Niad: <a href="https://ashfires.com/jswm" target="_blank" rel="noopener noreferrer">Read the book page</a></p>
+            </div>
+            <a href="https://youtu.be/9RgG_lM7Lmg" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/ashfires-logo.png" alt="" aria-hidden="true" />
+        <p>Ashfires is an independent creative and research ecosystem.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html#books">Books</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#lexicon">Living Lexicon</a>
+      </div>
+      <div>
+        <h3>More</h3>
+        <a href="index.html#essays">Essays &amp; Newsletter</a>
+        <a href="index.html#music">Music</a>
+        <a href="show.html">The Ashfires Show</a>
+        <a href="team.html">Team</a>
+        <a href="https://ashfires.com/merch" target="_blank" rel="noopener noreferrer">Merch→</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:press@ashfires.com">press@ashfires.com</a>
+        <a href="index.html#newsletter">Support the Work</a>
+        <div class="footer-socials" aria-label="Ashfires social networks">
+          <a class="social-link" href="https://www.instagram.com/ashfirespress/" target="_blank" rel="noopener noreferrer" aria-label="Ashfires on Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4.2"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social-link" href="https://www.youtube.com/@AshfiresPress" target="_blank" rel="noopener noreferrer" aria-label="Ashfires on YouTube">
+            <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+              <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+            </svg>
+            <span>YouTube</span>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/company/ashfirespress" target="_blank" rel="noopener noreferrer" aria-label="Ashfires on LinkedIn">
+            <svg class="social-icon social-icon--linkedin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <text x="5.1" y="17" font-size="10.5" font-family="Arial, sans-serif" font-weight="700" fill="#fff">in</text>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> Ashfires. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll('.accordion-item').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (!item.open) return;
+        document.querySelectorAll('.accordion-item[open]').forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
