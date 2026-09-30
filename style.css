@@ -752,6 +752,10 @@ h3 {
     flex-direction: column;
   }
 
+  .newsletter-form input {
+    height: 4rem;
+  }
+
   .newsletter-form button {
     width: 100%;
   }
