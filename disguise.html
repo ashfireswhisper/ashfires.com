@@ -103,6 +103,19 @@
       box-shadow: 0 18px 35px rgba(40, 28, 20, 0.12);
     }
 
+    .identity-block {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(12rem, 0.75fr);
+      gap: clamp(2rem, 6vw, 4rem);
+      align-items: center;
+      margin-top: 1.25rem;
+    }
+
+    .identity-block .disguise-image {
+      width: min(100%, 19rem);
+      margin: 0 0 0 auto;
+    }
+
     .consent-block {
       margin-top: 3rem;
       padding: clamp(1.5rem, 4vw, 3rem);
@@ -138,6 +151,14 @@
 
       .disguise-video {
         order: -1;
+      }
+
+      .identity-block {
+        grid-template-columns: 1fr;
+      }
+
+      .identity-block .disguise-image {
+        margin: 1.5rem auto 0;
       }
     }
   </style>
@@ -195,10 +216,13 @@
       <article class="disguise-content">
         <p class="meta">The short answer</p>
         <h2>The puppet is Ian.</h2>
-        <p>Or rather, the puppet is the face Ian chose.</p>
-        <p>Ian doesn't put his real face online. That's not a bit and it's not a brand exercise. He decided a while ago that sharing his real identity publicly isn't safe, so Puppet Ian is how he shows up: same person, chosen face. Every image of him you'll see here is built from that puppet on purpose.</p>
-
-        <img class="disguise-image" src="images/pfpIan.jpg" alt="Puppet Ian, the chosen face of M. Ian Niad">
+        <div class="identity-block">
+          <div>
+            <p>Or rather, the puppet is the face Ian chose.</p>
+            <p>Ian doesn't put his real face online. That's not a bit and it's not a brand exercise. He decided a while ago that sharing his real identity publicly isn't safe, so Puppet Ian is how he shows up: same person, chosen face. Every image of him you'll see here is built from that puppet on purpose.</p>
+          </div>
+          <img class="disguise-image" src="images/pfpIan.jpg" alt="Puppet Ian, the chosen face of M. Ian Niad">
+        </div>
 
         <div class="consent-block">
           <h2>That's what this is actually about.</h2>
