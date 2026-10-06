@@ -81,6 +81,7 @@
       min-height: 2.9rem;
       padding: 0.7rem 1rem;
       border: 1px solid var(--text);
+      border-radius: 999px;
       color: var(--text);
       font-weight: 700;
       text-decoration: none;
@@ -116,6 +117,7 @@
       min-height: 2.8rem;
       padding: 0.7rem 1rem;
       border: 1px solid var(--text);
+      border-radius: 999px;
       color: var(--text);
       font-weight: 700;
       text-decoration: none;
@@ -396,6 +398,13 @@
       font-size: clamp(1.35rem, 3vw, 2rem);
     }
 
+    .episode-platforms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
     .episode-content {
       display: flex;
       flex-wrap: wrap;
@@ -413,8 +422,18 @@
     }
 
     .episode-book {
-      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
       font-weight: 700;
+    }
+
+    .episode-book-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
     }
 
     .episode-book a {
@@ -428,16 +447,54 @@
       white-space: normal;
     }
 
+    .episode-book-line a {
+      display: inline-flex;
+      min-height: 2.8rem;
+      padding: 0.7rem 1rem;
+      background: var(--text);
+      border-radius: 999px;
+      color: #fff8f0;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
     .episode-card a {
       display: inline-flex;
       align-items: center;
       min-height: 2.8rem;
       padding: 0.7rem 1rem;
       background: var(--text);
+      border-radius: 999px;
       color: #fff8f0;
       font-weight: 700;
       text-decoration: none;
       white-space: nowrap;
+    }
+
+    .episode-platforms .social-link {
+      width: 2.2rem;
+      min-height: 2.2rem;
+      padding: 0.35rem;
+      background: var(--text);
+      color: #fff8f0;
+      border-radius: 999px;
+    }
+
+    .episode-platforms .social-icon--youtube {
+      fill: #ff0000;
+    }
+
+    .episode-platforms .social-icon--spotify {
+      fill: #1ed760;
+    }
+
+    .episode-platforms .social-icon--apple {
+      fill: #fff8f0;
+    }
+
+    .episode-platforms .social-icon--amazon {
+      color: #ff9900;
+      fill: #ff9900;
     }
 
     .footer-socials {
@@ -462,7 +519,10 @@
     }
 
     .social-icon--linkedin,
-    .social-icon--youtube {
+    .social-icon--youtube,
+    .social-icon--spotify,
+    .social-icon--apple,
+    .social-icon--amazon {
       fill: currentColor;
       stroke: none;
     }
@@ -669,14 +729,72 @@
       </section>
 
       <div class="show-note">
-        <p class="meta">Watch the episodes</p>
+        <p class="meta">Listen to the episodes</p>
         <h2>Stay with the question.</h2>
         <p>Each episode is part of the wider Ashfires ecosystem, where personal experience, original research, creative work, and difficult questions are allowed to remain in the room together.</p>
         <details class="episode-card accordion-item" open>
           <summary class="episode-summary">
             <div>
+            <p class="meta">Episode 2</p>
+            <h3>A Safe Place to Land</h3>
+            <div class="episode-platforms">
+              <a class="social-link" href="https://youtu.be/UgnKpGe3lGE" target="_blank" rel="noopener noreferrer" aria-label="Listen to Episode 2 with captions on YouTube">
+                <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                  <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+                </svg>
+                <span>YouTube</span>
+              </a>
+            </div>
+            </div>
+          </summary>
+          <div class="episode-content">
+            <div>
+            <p class="episode-description">Riven counted eight out of ten. Rowan set the line at three. The ten ways the conversation goes sideways when you try to explain what's wrong, and the guide you write before the conversation goes sideways, not after.</p>
+            <p class="episode-description">In this episode, we sit with two exercises from the <em>Just Sit With Me Reflection Workbook</em>: the sideways conversation, and the <em>My Sit With Me Guide</em>, the sentence you hand someone so they can sit with it before they try to fix it.</p>
+            <p class="episode-description">The book's answers stay in the book. This is the conversation around it.</p>
+            <p class="episode-description">The Ashfires Show, with Rowan and Riven. Come sit with us.</p>
+            <div class="episode-book">
+              <div class="episode-book-line"><span><em>Just Sit With Me</em> by M. Ian Niad:</span> <a href="https://ashfires.com/jswm" target="_blank" rel="noopener noreferrer">Read the book page</a></div>
+              <div class="episode-book-line"><span><em>Just Sit With Me Reflection Workbook</em>:</span> <a href="https://amzn.to/4aWcJhI" target="_blank" rel="noopener noreferrer">Available on Amazon</a></div>
+            </div>
+            </div>
+          </div>
+        </details>
+        <details class="episode-card accordion-item">
+          <summary class="episode-summary">
+            <div>
             <p class="meta">Episode 1</p>
             <h3>Come Inside the House</h3>
+            <div class="episode-platforms">
+              <a class="social-link" href="https://youtu.be/9RgG_lM7Lmg" target="_blank" rel="noopener noreferrer" aria-label="Listen to Episode 1 with captions on YouTube">
+                <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                  <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+                </svg>
+                <span>YouTube</span>
+              </a>
+              <a class="social-link" href="https://open.spotify.com/episode/1IQDMQk37567YjPBatXQQ9?si=cyTidde4TFW9_KUrPzBS1w" target="_blank" rel="noopener noreferrer" aria-label="Listen to Episode 1 on Spotify">
+                <svg class="social-icon social-icon--spotify" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M7.2 9.1c3.3-1 6.8-.8 9.7.5M7.8 12c2.8-.8 5.7-.6 8.2.5M8.5 14.8c2.3-.6 4.6-.4 6.7.4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.4"></path>
+                </svg>
+                <span>Spotify</span>
+              </a>
+              <a class="social-link" href="https://podcasts.apple.com/us/podcast/come-inside-the-house-the-ashfires-show-ep-1/id6818699984?i=1000792930970" target="_blank" rel="noopener noreferrer" aria-label="Listen to Episode 1 on Apple Podcasts">
+                <svg class="social-icon social-icon--apple" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.8 12.3c0-1.8 1.5-2.7 1.6-2.8-.9-1.3-2.3-1.5-2.8-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7-1.3 0-2.5.8-3.2 2-1.4 2.4-.4 5.9 1 7.8.7.9 1.4 2 2.4 2 .9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.4.6 1 0 1.7-.9 2.3-1.9.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.5zM14.1 6.8c.5-.6.8-1.4.7-2.3-.7 0-1.6.5-2.1 1.1-.5.5-.8 1.3-.7 2.1.8.1 1.6-.4 2.1-.9z"></path>
+                </svg>
+                <span>Apple Podcasts</span>
+              </a>
+              <a class="social-link" href="https://music.amazon.com/podcasts/419bead0-83cb-4686-a9df-97daa79f5b65/episodes/5b7511b3-f942-4713-a2ef-9b153fb82d43/the-ashfires-show-come-inside-the-house-the-ashfires-show-ep-1" target="_blank" rel="noopener noreferrer" aria-label="Listen to Episode 1 on Amazon Music">
+                <svg class="social-icon social-icon--amazon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <text x="6.2" y="16" font-size="11" font-family="Arial, sans-serif" font-weight="700" fill="currentColor">a</text>
+                  <path d="M5.5 18.2c3.7 2.3 8.8 2.4 12.6.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+                </svg>
+                <span>Amazon Music</span>
+              </a>
+            </div>
             </div>
           </summary>
           <div class="episode-content">
@@ -687,7 +805,6 @@
             <p class="episode-description">The Ashfires Show, with Rowan and Riven. Come sit with us.</p>
             <p class="episode-book"><em>Just Sit With Me</em> by M. Ian Niad: <a href="https://ashfires.com/jswm" target="_blank" rel="noopener noreferrer">Read the book page</a></p>
             </div>
-            <a href="https://youtu.be/9RgG_lM7Lmg" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
           </div>
         </details>
       </div>
