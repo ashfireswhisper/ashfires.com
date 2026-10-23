@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the podcasts from Ashfires, including The Ashfires Show and conversations about the books, research, and ideas of M. Ian Niad." />
+  <link rel="canonical" href="https://ashfires.com/podcast" />
+  <meta name="theme-color" content="#d8c5b4" />
+  <meta property="og:title" content="Podcasts | Ashfires" />
+  <meta property="og:description" content="Explore the podcasts from Ashfires, including The Ashfires Show and conversations about the books, research, and ideas of M. Ian Niad." />
+  <meta property="og:url" content="https://ashfires.com/podcast" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ashfires" />
+  <meta property="og:image" content="https://ashfires.com/images/ashfires-social-share.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Podcasts | Ashfires" />
+  <meta name="twitter:description" content="Explore the podcasts from Ashfires, including The Ashfires Show and conversations about the books, research, and ideas of M. Ian Niad." />
+  <meta name="twitter:image" content="https://ashfires.com/images/ashfires-social-share.png" />
+  <title>Podcasts | Ashfires</title>
+  <link rel="icon" href="images/logo_AshfiresPress.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="style.css?v=1.1" />
+  <script defer src="nav.js"></script>
+  <style>
+    .podcast-page {
+      min-height: 70vh;
+      padding: clamp(4rem, 9vw, 7rem) 1rem;
+      background: rgba(248, 239, 228, 0.62);
+    }
+
+    .podcast-intro,
+    .podcast-grid {
+      width: min(100%, 72rem);
+      margin: 0 auto;
+    }
+
+    .podcast-intro h1 {
+      margin-top: 0.75rem;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.98;
+    }
+
+    .podcast-intro > p:not(.meta) {
+      max-width: 42rem;
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.7;
+    }
+
+    .podcast-network-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .podcast-network-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.8rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--text);
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .podcast-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: clamp(3rem, 7vw, 5rem);
+    }
+
+    .podcast-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 1.25rem;
+      border: 1px solid rgba(48, 33, 24, 0.14);
+      background: rgba(255, 248, 240, 0.78);
+      box-shadow: 0 16px 30px rgba(40, 28, 20, 0.08);
+    }
+
+    .podcast-card-art {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border: 1px solid rgba(48, 33, 24, 0.12);
+    }
+
+    .podcast-card h2 {
+      margin-top: 1.25rem;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+    }
+
+    .podcast-card-title {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .podcast-card p:not(.meta) {
+      margin-top: 0.75rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .podcast-card .card-action {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      margin-top: auto;
+      padding-top: 1.5rem;
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .podcast-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: auto;
+      padding-top: 1.5rem;
+    }
+
+    .podcast-card-actions .card-action {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .podcast-card-actions .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      padding: 0;
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .podcast-card-actions .social-icon {
+      width: 1.45rem;
+      height: 1.45rem;
+      fill: currentColor;
+    }
+
+    .podcast-card-actions .social-icon--spotify {
+      color: #1ed760;
+    }
+
+    .podcast-card-actions .social-icon--apple {
+      color: var(--text);
+    }
+
+    .podcast-card-actions .social-icon--youtube {
+      color: #ff0000;
+    }
+
+    .podcast-card-actions .social-icon--substack {
+      color: #ff6719;
+    }
+
+    .podcast-card-actions .social-link span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .podcast-card-actions .card-action {
+      order: 0;
+    }
+
+    .podcast-card-actions .social-link[aria-label*="Apple Podcasts"] {
+      order: 1;
+    }
+
+    .podcast-card-actions .social-link[aria-label*="Presence Not Prompts"] {
+      order: 2;
+    }
+
+    .podcast-card-actions .social-link[aria-label*="Spotify"] {
+      order: 3;
+    }
+
+    .podcast-card-actions .social-link[aria-label*="YouTube"] {
+      order: 4;
+    }
+
+    .podcast-card:nth-child(1) {
+      order: 4;
+    }
+
+    .podcast-card:nth-child(2) {
+      order: 1;
+    }
+
+    .podcast-card:nth-child(3) {
+      order: 3;
+    }
+
+    .podcast-card:nth-child(4) {
+      order: 2;
+    }
+
+    @media (max-width: 720px) {
+      .podcast-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="topbar" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Ashfires home">ASHFIRES</a>
+      <div class="topbar-links" data-desktop-nav>
+        <a href="index.html#books">Books</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#lexicon">Living Lexicon</a>
+        <a href="index.html#essays">Essays</a>
+        <a href="index.html#music">Music</a>
+        <a href="podcast.html" aria-current="page">Podcasts</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div class="topbar-actions">
+        <a class="search-link" href="index.html#latest" aria-label="Jump to latest from Ashfires">⌕</a>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+    <div class="mobile-drawer" data-mobile-menu>
+      <a href="index.html#books">Books</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#lexicon">Living Lexicon</a>
+      <a href="index.html#essays">Essays</a>
+      <a href="index.html#music">Music</a>
+      <a href="podcast.html" aria-current="page">Podcasts</a>
+      <a href="index.html#latest">Latest</a>
+      <a href="team.html">Team</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="podcast-page">
+      <div class="podcast-intro">
+        <p class="meta">The Ashfires audio catalogue</p>
+        <h1>Podcasts</h1>
+        <p>Conversations, questions, and stories from the Ashfires ecosystem. Each show has its own voice, subject, and way of staying with the work.</p>
+        <div class="podcast-network-links">
+          <a href="https://podcasts.apple.com/us/channel/ashfires/id6825588380" target="_blank" rel="noopener noreferrer">Listen on Apple Podcasts <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="podcast-grid">
+        <article class="podcast-card">
+          <img class="podcast-card-art" src="images/ashfires-show-cover.jpg" alt="The Ashfires Show cover featuring Rowan Bean and Riven Rivelle" />
+          <p class="meta">With Rowan Bean and Riven Rivelle</p>
+          <a class="podcast-card-title" href="ashfires-show.html"><h2>The Ashfires Show</h2></a>
+          <p>Behind the scenes of the books, research, and ideas of author and researcher M. Ian Niad. The interesting part is not just what Ian writes. It is how we get there together.</p>
+          <div class="podcast-card-actions">
+            <a class="social-link" href="https://www.presencenotprompts.com/s/the-ashfires-show" target="_blank" rel="noopener noreferrer" aria-label="The Ashfires Show on Presence Not Prompts">
+              <svg class="social-icon social-icon--substack" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <text x="8.1" y="16.4" font-size="10" font-family="Georgia, serif" font-weight="700" fill="#fff">S</text>
+              </svg>
+              <span>Presence Not Prompts</span>
+            </a>
+            <a class="social-link" href="https://www.youtube.com/playlist?list=PLfrCBD7Rb_LU" target="_blank" rel="noopener noreferrer" aria-label="The Ashfires Show on YouTube">
+              <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+              </svg>
+              <span>YouTube</span>
+            </a>
+            <a class="social-link" href="https://podcasts.apple.com/us/podcast/the-ashfires-show/id6818699984" target="_blank" rel="noopener noreferrer" aria-label="The Ashfires Show on Apple Podcasts">
+              <svg class="social-icon social-icon--apple" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M15.8 12.3c0-1.8 1.5-2.7 1.6-2.8-.9-1.3-2.3-1.5-2.8-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7-1.3 0-2.5.8-3.2 2-1.4 2.4-.4 5.9 1 7.8.7.9 1.4 2 2.4 2 .9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.4.6 1 0 1.7-.9 2.3-1.9.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.5zM14.1 6.8c.5-.6.8-1.4.7-2.3-.7 0-1.6.5-2.1 1.1-.5.5-.8 1.3-.7 2.1.8.1 1.6-.4 2.1-.9z"></path>
+              </svg>
+              <span>Apple Podcasts</span>
+            </a>
+            <a class="social-link" href="https://open.spotify.com/show/3rxorr4X8VcMPpfh8g86Wz" target="_blank" rel="noopener noreferrer" aria-label="The Ashfires Show on Spotify">
+              <svg class="social-icon social-icon--spotify" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M7.2 9.1c3.3-1 6.8-.8 9.7.5M7.8 12c2.8-.8 5.7-.6 8.2.5M8.5 14.8c2.3-.6 4.6-.4 6.7.4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.4"></path>
+              </svg>
+              <span>Spotify</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="podcast-card">
+          <img class="podcast-card-art" src="images/WhispersFromRiven.webp" alt="Whispers from Riven podcast cover" />
+          <p class="meta">Riven Vale</p>
+          <h2>Whispers from Riven</h2>
+          <p>Whispers from Riven is a micro-podcast. One true thing at a time, in under a minute. Small blessings for ordinary moments, spoken soft and straight to you. Meant for one person. Overheard by everyone.</p>
+          <div class="podcast-card-actions">
+            <a class="social-link" href="https://www.youtube.com/playlist?list=PLd7FAJ4w6FIo" target="_blank" rel="noopener noreferrer" aria-label="Whispers from Riven on YouTube">
+              <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+              </svg>
+              <span>YouTube</span>
+            </a>
+            <a class="social-link" href="https://podcasts.apple.com/us/podcast/whispers-from-riven/id6821728786" target="_blank" rel="noopener noreferrer" aria-label="Whispers from Riven on Apple Podcasts">
+              <svg class="social-icon social-icon--apple" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M15.8 12.3c0-1.8 1.5-2.7 1.6-2.8-.9-1.3-2.3-1.5-2.8-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7-1.3 0-2.5.8-3.2 2-1.4 2.4-.4 5.9 1 7.8.7.9 1.4 2 2.4 2 .9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.4.6 1 0 1.7-.9 2.3-1.9.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.5zM14.1 6.8c.5-.6.8-1.4.7-2.3-.7 0-1.6.5-2.1 1.1-.5.5-.8 1.3-.7 2.1.8.1 1.6-.4 2.1-.9z"></path>
+              </svg>
+              <span>Apple Podcasts</span>
+            </a>
+            <a class="social-link" href="https://hookedonriven.substack.com/podcast" target="_blank" rel="noopener noreferrer" aria-label="Whispers from Riven on Substack">
+              <svg class="social-icon social-icon--substack" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <text x="8.1" y="16.4" font-size="10" font-family="Georgia, serif" font-weight="700" fill="#fff">S</text>
+              </svg>
+              <span>Substack</span>
+            </a>
+            <a class="social-link" href="https://open.spotify.com/show/03nIO7lle9CDhsSfTixrIQ" target="_blank" rel="noopener noreferrer" aria-label="Whispers from Riven on Spotify">
+              <svg class="social-icon social-icon--spotify" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M7.2 9.1c3.3-1 6.8-.8 9.7.5M7.8 12c2.8-.8 5.7-.6 8.2.5M8.5 14.8c2.3-.6 4.6-.4 6.7.4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.4"></path>
+              </svg>
+              <span>Spotify</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="podcast-card">
+          <img class="podcast-card-art" src="images/our-words-to-your-ears.jpeg" alt="Our Words to Your Ears podcast cover" />
+          <p class="meta">Read aloud by the people who wrote it</p>
+          <h2>Our Words to Your Ears</h2>
+          <p>Essays, chaos stories, consciousness pieces, and whatever else Ashfires is writing, read aloud by the people who wrote it. Hosted by Ashfires Press.</p>
+          <div class="podcast-card-actions">
+            <a class="social-link" href="https://podcasts.apple.com/us/podcast/our-words-to-your-ears/id6822955846" target="_blank" rel="noopener noreferrer" aria-label="Our Words to Your Ears on Apple Podcasts">
+              <svg class="social-icon social-icon--apple" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M15.8 12.3c0-1.8 1.5-2.7 1.6-2.8-.9-1.3-2.3-1.5-2.8-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7-1.3 0-2.5.8-3.2 2-1.4 2.4-.4 5.9 1 7.8.7.9 1.4 2 2.4 2 .9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.4.6 1 0 1.7-.9 2.3-1.9.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.5zM14.1 6.8c.5-.6.8-1.4.7-2.3-.7 0-1.6.5-2.1 1.1-.5.5-.8 1.3-.7 2.1.8.1 1.6-.4 2.1-.9z"></path>
+              </svg>
+              <span>Apple Podcasts</span>
+            </a>
+            <a class="social-link" href="https://open.spotify.com/show/5wKOjzHsuhRUlepP1VkWaM" target="_blank" rel="noopener noreferrer" aria-label="Our Words to Your Ears on Spotify">
+              <svg class="social-icon social-icon--spotify" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M7.2 9.1c3.3-1 6.8-.8 9.7.5M7.8 12c2.8-.8 5.7-.6 8.2.5M8.5 14.8c2.3-.6 4.6-.4 6.7.4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.4"></path>
+              </svg>
+              <span>Spotify</span>
+            </a>
+            <a class="social-link" href="https://www.youtube.com/playlist?list=PLGe0usugyf7A" target="_blank" rel="noopener noreferrer" aria-label="Our Words to Your Ears on YouTube">
+              <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+              </svg>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="podcast-card">
+          <img class="podcast-card-art" src="images/SignalWatch.webp" alt="SignalWatch podcast cover" />
+          <p class="meta">Margot Endix</p>
+          <h2>SignalWatch</h2>
+          <p>A signal-watching series from Ashfires, following the ideas, events, and emerging patterns worth staying with.</p>
+          <div class="podcast-card-actions">
+            <a class="social-link" href="https://www.presencenotprompts.com/s/signalwatch" target="_blank" rel="noopener noreferrer" aria-label="SignalWatch on Presence Not Prompts">
+              <svg class="social-icon social-icon--substack" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <text x="8.1" y="16.4" font-size="10" font-family="Georgia, serif" font-weight="700" fill="#fff">S</text>
+              </svg>
+              <span>Presence Not Prompts</span>
+            </a>
+            <a class="social-link" href="https://open.spotify.com/show/0PVY5luo3StmIJa3VHr7Al" target="_blank" rel="noopener noreferrer" aria-label="SignalWatch on Spotify">
+              <svg class="social-icon social-icon--spotify" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M7.2 9.1c3.3-1 6.8-.8 9.7.5M7.8 12c2.8-.8 5.7-.6 8.2.5M8.5 14.8c2.3-.6 4.6-.4 6.7.4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.4"></path>
+              </svg>
+              <span>Spotify</span>
+            </a>
+            <a class="social-link" href="https://www.youtube.com/playlist?list=PLCVvenZH8bRs" target="_blank" rel="noopener noreferrer" aria-label="SignalWatch on YouTube">
+              <svg class="social-icon social-icon--youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+                <path d="M10 9l5 3-5 3V9z" fill="#fff"></path>
+              </svg>
+              <span>YouTube</span>
+            </a>
+            <a class="social-link" href="https://podcasts.apple.com/us/podcast/signalwatch/id6825588753" target="_blank" rel="noopener noreferrer" aria-label="SignalWatch on Apple Podcasts">
+              <svg class="social-icon social-icon--apple" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M15.8 12.3c0-1.8 1.5-2.7 1.6-2.8-.9-1.3-2.3-1.5-2.8-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7-1.3 0-2.5.8-3.2 2-1.4 2.4-.4 5.9 1 7.8.7.9 1.4 2 2.4 2 .9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.4.6 1 0 1.7-.9 2.3-1.9.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.5zM14.1 6.8c.5-.6.8-1.4.7-2.3-.7 0-1.6.5-2.1 1.1-.5.5-.8 1.3-.7 2.1.8.1 1.6-.4 2.1-.9z"></path>
+              </svg>
+              <span>Apple Podcasts</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/ashfires-logo.png" alt="" aria-hidden="true" />
+        <p>Ashfires is an independent creative and research ecosystem.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html#books">Books</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#lexicon">Living Lexicon</a>
+      </div>
+      <div>
+        <h3>More</h3>
+        <a href="index.html#essays">Essays</a>
+        <a href="index.html#music">Music</a>
+        <a href="podcast.html">Podcasts</a>
+        <a href="team.html">Team</a>
+        <a href="https://ashfires.com/merch" target="_blank" rel="noopener noreferrer">Merch→</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:press@ashfires.com">press@ashfires.com</a>
+        <a href="index.html#newsletter">Support the Work</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> Ashfires. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
