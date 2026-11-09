@@ -11,6 +11,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ashfires.com/digital-personas.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ashfires.com/podcast</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
